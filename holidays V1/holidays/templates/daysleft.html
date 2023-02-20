@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Days Left{% endblock %}
+
+{% block content %}
+    <h1 align="center">Holidays Calculator</h1>
+    <br><h2 align="center">On the: {{ testdate.day }}-{{testdate.month}}-{{testdate.year }}</h2>
+    <h2 align="center">
+        Days taken:{{ dl }}
+        <br>
+        Days left to take:{{ 90-dl }}
+    </h2><br><br><br>
+
+    <form method="POST">
+
+        <div class="dt1" align="center">
+            <label for="date3">Click box to change test date.</label>
+            <input type="date" name="date3" id="date3" required>
+        </div>
+        <div align="center">
+            <button type="submit", class="btnsignup">Submit</button>
+        </div>
+
+    </form>
+
+
+
+
+{% endblock %}

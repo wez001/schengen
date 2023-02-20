@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}sign-up{% endblock %}
+
+{% block content %}
+
+
+
+<form method="POST">
+    <h1 align="center">Travel Calculator</h1>
+    <h3 align="center">Sign Up</h3>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" required id="email" name="email" placeholder="Enter email">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="password1">Password</label>
+        <input type="password" required id="password1" name="password1" placeholder="Enter password">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="password2">Password Confirm</label>
+        <input type="password" required id="password2" name="password2" placeholder="Re-enter password">
+    </div>
+    <br>
+    
+    <br>
+    <button type="submit" class="btnsignup">Submit</button>
+    <br>
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+        {% if category == 'error' %}    
+            <div class="alert"><span>{{ message }}</span></div>
+        {% else %}
+            <div class="alertss">{{ message }}</div>
+        {% endif %}
+    {% endfor %}
+    
+</form>
+
+
+{% endblock %}

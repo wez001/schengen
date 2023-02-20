@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h1 align="center">Travel Calculator</h1>
+{% if user.hol %}
+<h3 align="center">Press DaysLeft at top of screen to see allowance </h3>
+<ul class="list" id="Hols">
+    
+        <h3 align="center">Travel List <br>
+        
+        x to delete a trip.</h3>
+    <h4>
+    
+        <table align="center"><th>&nbsp;Del&nbsp;</th> <th>&nbsp;StartDate&nbsp;</th><th>&nbsp;EndDate&nbsp;</th>
+    {% endif %}
+    {% for hol in user.hol %}    
+            <tr>
+            <td><button type="button" class="close" onClick="deleteHol({{ hol.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button></td>
+            <td>&nbsp;{{ hol.date1.day}}-{{hol.date1.month}}-{{hol.date1.year}}&nbsp;</td> 
+            <td>&nbsp;{{ hol.date2.day}}-{{hol.date2.month}}-{{hol.date2.year }}&nbsp;</td>        
+        </tr>
+    {% endfor %}</h4>
+    </table>
+</ul>
+
+<form method="POST">
+    <div class = "dt1" align="center">  
+        <p>Add Trip:</p>
+        <label for="date1">Start date:</label> 
+        <input type="date" name="date1" id="date1" required>
+        <label for="date2">End date:</label>
+        <input type="date" name="date2" id="date2" required>
+    </div>    
+    <div align="center">
+        <button type="submit", class="btnsignup">Add</button>
+    </div>
+    <div align="center"> <p>(for instructions see about page)</p></div>
+</form>
+
+
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+        {% if category == 'error' %}    
+            <div class="alert"><span>{{ message }}</span></div>
+        {% else %}
+            <div class="alertss"><span>{{ message }}</span></div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

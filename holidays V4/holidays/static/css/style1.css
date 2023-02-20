@@ -1,0 +1,69 @@
+html {
+    background-image: url("../img/p2.jpg");     /* background image */
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-color: #cccccc; */
+}
+
+body{                           /* this is to get the navbar at the top of screen */
+    margin: 0;
+    padding-top: 0;    
+}
+
+.all{                          /*for margins but not including navbar */
+    padding-left: 40x;
+    padding-right: 40px;
+    padding-top:20px;
+}
+
+.topnav{                        /* navbar */
+    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    background: white;  
+    font-size: large;
+}
+
+.form-group{                    /* signup screen */
+    text-align: left; 
+}
+
+.btnsignup{         /*button*/
+    margin:30px auto;
+    display: block;
+    width:3cm;
+    height:1cm;   
+    background-color: rgb(0, 145, 255);
+    border-radius: 8px; 
+}
+
+input[type="password"], input[type="text"], input[type="email"]
+{
+    opacity: 0.7;
+    width:99%;
+    height: 30px;
+}
+
+.alert, .alertss{                       /* alerts */
+    text-align: center;
+    width: 99%;
+    font-size: large;
+}
+.alert{
+    background-color: red;
+    color: yellow;
+}
+.alertss{
+    background-color: green;
+    color: yellow;
+}
+.dt1{           /*date center*/
+    align-items: center;
+    justify-content: center;
+}
+table, th, td {
+    border:1px solid black;
+  }
