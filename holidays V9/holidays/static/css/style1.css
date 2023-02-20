@@ -1,0 +1,110 @@
+html {
+    background-image: url("../img/p2.jpg");     /* background image */
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-color: #333;
+}
+
+body{                           /* this is to get the navbar at the top of screen */
+    margin: 0;
+    padding-top: 0;    
+}
+
+.all{                          /*for margins but not including navbar */
+    padding-left: 40x;
+    padding-right: 40px;
+    padding-top:20px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1% 3%;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .topnav a.wes{
+    float: right;
+  }
+
+.form-group{                    /* signup screen */
+    padding-left: 40px;
+    text-align: left; 
+}
+
+.btnsignup{         /*button*/
+    margin:30px auto;
+    display: block;
+    width:3cm;
+    height:1cm;   
+    background-color: rgb(0, 145, 255);
+    border-radius: 8px; 
+}
+
+input[type="password"], input[type="text"], input[type="email"]
+{
+    opacity: 0.7;
+    width:99%;
+    height: 30px;
+}
+
+.alert, .alertss{                       /* alerts */
+    text-align: center;
+    width: 100%;
+    font-size: large;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.alert{
+    background-color: red;
+    color: yellow;
+}
+.alertss{
+    background-color: green;
+    color: yellow;
+}
+.dt1{           /*date center*/
+    align-items: center;
+    justify-content: center;
+}
+table, th, td {
+    border:1px solid black;
+  }
+.about{
+    padding-left: 40px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding: 0.5px;
+
+}
